@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="assets/css/style.Css">
+  <title>Exercice 3 Partie 2</title>
+</head>
+<body>
+  <canvas id="canvas" width="400" height="400"></canvas>
+  <script>
+    var c = document.getElementById('canvas');
+    var ctx = c.getContext('2d');
+    /*Tête de ptit biscuit*/
+    ctx.beginPath();
+    ctx.arc(200,115,40,0,Math.PI*2,true);
+    ctx.strokeStyle = "coral";
+    ctx.fillStyle = "#976F0F";
+    ctx.fill();
+    ctx.closePath();
+    /*Yeux de ptit biscuits*/
+    /*Oeil droit*/
+    ctx.beginPath();
+    ctx.fillStyle = 'white';
+    ctx.arc(185,110,7,Math.PI*2,false);
+    ctx.closePath();
+    ctx.fill();
+    /*Sourcil droit*/
+    ctx.beginPath();
+    ctx.strokeStyle = 'white';
+    ctx.moveTo(175,100);
+    ctx.lineWidth="2";
+    ctx.bezierCurveTo(180,95,190,95,195,100);
+    ctx.stroke();
+    /*Sourcil gauche*/
+    ctx.beginPath();
+    ctx.strokeStyle = 'white';
+    ctx.moveTo(205,100);
+    ctx.lineWidth="2";
+    ctx.bezierCurveTo(210,95,220,95,225,100);
+    ctx.stroke();
+    /*Oeil gauche*/
+    ctx.beginPath();
+    ctx.fillStyle = 'white';
+    ctx.arc(215,110,7,Math.PI*2,false);
+    ctx.closePath();
+    ctx.fill();
+    /*Sourire de ptit biscuit*/
+    ctx.beginPath();
+    ctx.strokeStyle = 'red';
+    ctx.moveTo(180,125);
+    ctx.lineWidth='1';
+    ctx.bezierCurveTo(190,135,210,135,220,125);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.strokeStyle = 'red';
+    ctx.moveTo(180,125);
+    ctx.lineWidth='1';
+    ctx.bezierCurveTo(190,145,210,145,220,125);
+    ctx.stroke();
+    /*Corps de ptit biscuit*/
+    ctx.beginPath();
+    ctx.fillStyle = '#976F0F';
+    ctx.moveTo(160,140);
+    ctx.lineTo(240,140);
+    ctx.lineTo(240,350);
+    ctx.bezierCurveTo(235,360,215,360,210,350);
+    ctx.lineTo(210,320);
+    ctx.bezierCurveTo(207,290,190,300,190,315);
+    ctx.lineTo(190,350);
+    ctx.bezierCurveTo(180,360,170,360,160,350);
+    ctx.fill();
+    /*Bras gauche de ptit biscuit*/
+    ctx.beginPath();
+    ctx.fillStyle = '#976F0F';
+    ctx.moveTo(240,140);
+    ctx.lineTo(350,140);
+    ctx.bezierCurveTo(375,145,375,160,350,165);
+    ctx.lineTo(240,165);
+    ctx.closePath();
+    ctx.fill();
+    /*Bras droit de ptit biscuit*/
+    ctx.beginPath();
+    ctx.fillStyle = '#976F0F';
+    ctx.moveTo(160,140);
+    ctx.lineTo(50,140);
+    ctx.bezierCurveTo(25,145,25,160,50,165);
+    ctx.lineTo(160,165);
+    ctx.closePath();
+    ctx.fill();
+    /*Boutons de ptit biscuit*/
+    ctx.beginPath();
+    ctx.fillStyle = 'purple';
+    ctx.arc(200,220,8,0,Math.PI*2,true);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.fillStyle = 'purple';
+    ctx.arc(200,180,8,0,Math.PI*2,true);
+    ctx.fill();
+  </script>
+</body>
+</html>
